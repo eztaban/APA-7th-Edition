@@ -449,7 +449,10 @@
       </xsl:call-template>
     </xsl:variable>
     <!-- Note: removed due to GitHub issue #3 https://github.com/briankavanaugh/APA-7th-Edition/issues/3 <xsl:value-of select="/*/b:Locals/b:Local[@LCID=$_LCID]/b:Strings/b:RetrievedFromCap"/> -->
-    <xsl:text>Retrieved %1, from %2</xsl:text>
+    <!-- Reintroduced due to issue #19 https://github.com/briankavanaugh/APA-7th-Edition/issues/19 -->
+    <xsl:value-of select="/*/b:Locals/b:Local[@LCID=$_LCID]/b:Strings/b:RetrievedFromCap"/>
+    <!-- Removed due to issue #19: https://github.com/briankavanaugh/APA-7th-Edition/issues/19 -->
+    <!-- <xsl:text>Retrieved %1, from %2</xsl:text> -->
   </xsl:template>
 
   
@@ -461,7 +464,10 @@
       </xsl:call-template>
     </xsl:variable>
     <!-- Note: removed due to GitHub issue #3 https://github.com/briankavanaugh/APA-7th-Edition/issues/3 <xsl:value-of select="/*/b:Locals/b:Local[@LCID=$_LCID]/b:Strings/b:RetrievedCap"/> -->
-    <xsl:text>Retrieved %1.</xsl:text>
+    <!-- Reintroduced due to issue #19 https://github.com/briankavanaugh/APA-7th-Edition/issues/19 -->
+    <xsl:value-of select="/*/b:Locals/b:Local[@LCID=$_LCID]/b:Strings/b:RetrievedCap"/>
+    <!-- Removed due to issue #19: https://github.com/briankavanaugh/APA-7th-Edition/issues/19 -->
+    <!-- <xsl:text>Retrieved %1.</xsl:text> -->
   </xsl:template>
 
   
@@ -473,7 +479,10 @@
       </xsl:call-template>
     </xsl:variable>
     <!-- Note: removed due to GitHub issue #3 https://github.com/briankavanaugh/APA-7th-Edition/issues/3 <xsl:value-of select="/*/b:Locals/b:Local[@LCID=$_LCID]/b:Strings/b:FromCap"/> -->
-    <xsl:text>%1</xsl:text>
+    <!-- Reintroduced due to issue #19 https://github.com/briankavanaugh/APA-7th-Edition/issues/19 -->
+    <xsl:value-of select="/*/b:Locals/b:Local[@LCID=$_LCID]/b:Strings/b:FromCap"/>
+    <!-- Removed due to issue #19: https://github.com/briankavanaugh/APA-7th-Edition/issues/19 -->
+    <!-- <xsl:text>%1</xsl:text> -->
   </xsl:template>
 
   
@@ -2133,7 +2142,7 @@
       </xsl:when>
 
       <xsl:when test="b:OfficeStyleKey">
-        <xsl:text>APA</xsl:text>
+        <xsl:text>APA_Localized</xsl:text>
       </xsl:when>
 
        <xsl:when test="b:XslVersion">
